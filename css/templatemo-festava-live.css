@@ -709,7 +709,6 @@ video-wrap {
 
 .site-footer-top {
   background-color: var(--secondary-color);
-  background-image: url('../images/nainoa-shizuru-NcdG9mK3PBY-unsplash.jpg');
   background-repeat: no-repeat;
   margin-bottom: 70px;
   padding-top: 30px;
@@ -744,6 +743,12 @@ video-wrap {
   font-size: var(--copyright-font-size);
 }
 
+.success-message-confirmation {
+  font-size: 18px;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
 
 /*---------------------------------------
   SOCIAL ICON               
