@@ -11,41 +11,41 @@ https://templatemo.com/tm-583-festava-live
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --white-color:                  #ffffff;
-  --primary-color:                #F8CB2E;
-  --secondary-color:              #F8CB2E;
-  --section-bg-color:             #F8CB2E;
-  --custom-btn-bg-color:          #F8CB2E;
-  --custom-btn-bg-hover-color:    #F8CB2E;
-  --dark-color:                   #000000;
-  --p-color:                      #000000;
-  --border-color:                 #000000;
-  --link-hover-color:             #F8CB2E;
+  --white-color: #ffffff;
+  --primary-color: #F8CB2E;
+  --secondary-color: #F8CB2E;
+  --section-bg-color: #F8CB2E;
+  --custom-btn-bg-color: #F8CB2E;
+  --custom-btn-bg-hover-color: #F8CB2E;
+  --dark-color: #000000;
+  --p-color: #000000;
+  --border-color: #000000;
+  --link-hover-color: #F8CB2E;
 
-  --body-font-family:             'Outfit', sans-serif;
+  --body-font-family: 'Outfit', sans-serif;
 
-  --h1-font-size:                 74px;
-  --h2-font-size:                 46px;
-  --h3-font-size:                 32px;
-  --h4-font-size:                 28px;
-  --h5-font-size:                 24px;
-  --h6-font-size:                 22px;
-  --p-font-size:                  18px;
-  --btn-font-size:                14px;
-  --copyright-font-size:          16px;
+  --h1-font-size: 74px;
+  --h2-font-size: 46px;
+  --h3-font-size: 32px;
+  --h4-font-size: 28px;
+  --h5-font-size: 24px;
+  --h6-font-size: 22px;
+  --p-font-size: 18px;
+  --btn-font-size: 14px;
+  --copyright-font-size: 16px;
 
-  --border-radius-large:          100px;
-  --border-radius-medium:         20px;
-  --border-radius-small:          10px;
+  --border-radius-large: 100px;
+  --border-radius-medium: 20px;
+  --border-radius-small: 10px;
 
-  --font-weight-light:            300;
-  --font-weight-normal:           400;
-  --font-weight-bold:             700;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
 }
 
 body {
   background-color: var(--white-color);
-  font-family: var(--body-font-family); 
+  font-family: var(--body-font-family);
 }
 
 
@@ -106,7 +106,7 @@ ul li {
   font-weight: var(--font-weight-light);
 }
 
-a, 
+a,
 button {
   touch-action: manipulation;
   transition: all 0.3s;
@@ -221,7 +221,7 @@ strong {
   background-color: var(--section-bg-color);
 }
 
-.section-overlay + .container {
+.section-overlay+.container {
   position: relative;
 }
 
@@ -249,22 +249,22 @@ strong {
   margin-right: 15px;
 }
 
-.nav-tabs .nav-item.show .nav-link, 
+.nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active,
-.nav-tabs .nav-link:focus, 
+.nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover {
   background: var(--white-color);
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
   color: var(--primary-color);
 }
 
 .nav-tabs h5 {
-  color: var(--p-color); 
+  color: var(--p-color);
   margin-bottom: 0;
 }
 
 .nav-tabs .nav-link.active h5,
-.nav-tabs .nav-link:focus h5, 
+.nav-tabs .nav-link:focus h5,
 .nav-tabs .nav-link:hover h5 {
   color: var(--primary-color);
 }
@@ -321,9 +321,11 @@ strong {
 -----------------------------------------*/
 video-wrap {
   z-index: -100;
-  position: relative; /* necessário para posicionar .custom-video absoluta dentro dele */
+  position: relative;
+  /* necessário para posicionar .custom-video absoluta dentro dele */
   width: 100%;
-  height: 100vh; /* ou outra altura conforme necessário */
+  height: 100vh;
+  /* ou outra altura conforme necessário */
   overflow: hidden;
 }
 
@@ -334,7 +336,8 @@ video-wrap {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  transform: scale(1.2); /* começa com zoom */
+  transform: scale(1.2);
+  /* começa com zoom */
   animation: zoomOut 6s ease-out forwards;
 }
 
@@ -343,6 +346,7 @@ video-wrap {
   0% {
     transform: scale(1.2);
   }
+
   100% {
     transform: scale(1);
   }
@@ -390,7 +394,7 @@ video-wrap {
   padding-bottom: 15px;
 }
 
-.navbar-nav .nav-link.active, 
+.navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
   color: var(--secondary-color);
 }
@@ -462,9 +466,11 @@ video-wrap {
 }
 
 .navbar-logo {
-  height: 50px; /* Ajuste conforme necessário */
+  height: 50px;
+  /* Ajuste conforme necessário */
   width: auto;
-  max-width: 150px; /* Para evitar que fique muito grande */
+  max-width: 150px;
+  /* Para evitar que fique muito grande */
 }
 
 
@@ -481,14 +487,16 @@ video-wrap {
 /* DESKTOP: sobe um pouco a imagem */
 @media screen and (min-width: 769px) {
   .custom-video {
-    object-position: center 80%; /* sobe um pouco verticalmente */
+    object-position: center 80%;
+    /* sobe um pouco verticalmente */
   }
 }
 
 /* MOBILE: empurra a imagem para a direita */
 @media screen and (max-width: 768px) {
   .custom-video {
-    object-position: 10% center; /* empurra para a direita */
+    object-position: 10% center;
+    /* empurra para a direita */
   }
 }
 
@@ -514,17 +522,18 @@ video-wrap {
 }
 
 .custom-title {
-  color: white; /* Mantém o preenchimento branco */
-  text-shadow: 
-  -2px -2px 0 #000000,  
-  2px -2px 0 #000000,  
- -2px  2px 0 #000000,  
-  2px  2px 0 #000000,  
- -2px  0px 0 #000000,  
-  2px  0px 0 #000000,  
-  0px -2px 0 #000000,  
-  0px  2px 0 #000000;
- 
+  color: white;
+  /* Mantém o preenchimento branco */
+  text-shadow:
+    -2px -2px 0 #000000,
+    2px -2px 0 #000000,
+    -2px 2px 0 #000000,
+    2px 2px 0 #000000,
+    -2px 0px 0 #000000,
+    2px 0px 0 #000000,
+    0px -2px 0 #000000,
+    0px 2px 0 #000000;
+
 }
 
 /* Seção de Avaliações */
@@ -668,15 +677,19 @@ video-wrap {
   margin-bottom: 24px;
   padding-top: 13px;
   padding-bottom: 13px;
-  border: 1px solid #ccc; /* Mantém a borda padrão */
+  border: 1px solid #ccc;
+  /* Mantém a borda padrão */
   outline: none;
   transition: all 0.2s ease-in-out;
 }
 
 .custom-form .form-control:focus {
-  outline: 2px solid #F8CB2E; /* Define o contorno amarelo */
-  border-color: #F8CB2E; /* Altera a cor da borda para amarelo */
-  box-shadow: none; /* Remove o azul padrão do Chrome/Edge */
+  outline: 2px solid #F8CB2E;
+  /* Define o contorno amarelo */
+  border-color: #F8CB2E;
+  /* Altera a cor da borda para amarelo */
+  box-shadow: none;
+  /* Remove o azul padrão do Chrome/Edge */
 }
 
 .custom-form button[type="submit"] {
@@ -721,7 +734,7 @@ video-wrap {
 }
 
 .site-footer-title {
-  color: var(--primary-color); 
+  color: var(--primary-color);
 }
 
 .site-footer-link,
@@ -787,7 +800,7 @@ video-wrap {
   display: block;
 }
 
-.social-icon-link span:hover::before{
+.social-icon-link span:hover::before {
   animation: spinAround 2s linear infinite;
 }
 
@@ -795,6 +808,7 @@ video-wrap {
   from {
     transform: rotate(0deg)
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -833,7 +847,7 @@ video-wrap {
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  
+
   .navbar {
     background-color: var(--dark-color);
   }
@@ -862,7 +876,7 @@ video-wrap {
     padding: 20px;
   }
 
-  .schedule-table tr, 
+  .schedule-table tr,
   .schedule-table td {
     padding: 25px;
   }
@@ -903,7 +917,7 @@ video-wrap {
   h5 {
     font-size: 20px;
   }
-  
+
 }
 
 /* WhatsApp Button =======================================*/
@@ -938,7 +952,8 @@ video-wrap {
 
 /* Modal */
 .modal {
-  display: none; /* Mantém o modal oculto por padrão */
+  display: none;
+  /* Mantém o modal oculto por padrão */
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -984,11 +999,7 @@ video-wrap {
   width: 100%;
 }
 
-/* Plans */
-
-.pricing-rating {
-  padding-bottom: 5px; /* ajuste conforme o visual desejado */
-}
+/* Planos */
 
 .pricing-thumb {
   border: 5px dotted var(--dark-color);
@@ -1054,6 +1065,62 @@ video-wrap {
   line-height: normal;
 }
 
+/* Avaliações dos clientes */
+.testimonial-section {
+  background-color: #000; /* fundo da seção preto */
+  padding: 60px 20px;
+  color: #fff; /* cor base da seção */
+}
+
+.stars .star {
+  color: #FFD700; /* estrelas douradas */
+  font-size: 32px; /* ajuste de tamanho opcional */
+}
+
+/* Títulos e subtítulos */
+.rating-title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.rating-subtitle {
+  color: #ddd;
+  font-size: 16px;
+}
+
+/* Card do depoimento */
+.testimonial-card {
+  background-color: #fff; /* fundo branco */
+  color: #222; /* texto escuro no fundo claro */
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 700px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2); /* leve brilho dourado */
+}
+
+.testimonial-text {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #333; /* contraste com o fundo branco */
+}
+
+.testimonial-author {
+  font-weight: bold;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Botões de controle do carrossel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+
+
+
 /* Loader visual */
 .loader {
   border: 2px solid #f3f3f3;
@@ -1067,19 +1134,24 @@ video-wrap {
 
 /* Loader animation */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 
-/* ============== Spinner Overlay */
+/* Spinner de Carregamento*/
 #spinner-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: white; /* Pode trocar por black se quiser */
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1087,7 +1159,7 @@ video-wrap {
   transition: opacity 0.3s ease;
 }
 
-/* Spinner preto */
+
 .spinner {
   border: 6px solid #f3f3f3;
   border-top: 6px solid #000;
@@ -1098,8 +1170,13 @@ video-wrap {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Esconde o overlay após carregamento */
