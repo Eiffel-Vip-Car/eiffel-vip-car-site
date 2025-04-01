@@ -57,14 +57,39 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     return;
   }
 
-    // Validação de CEPs (mínimo 8 dígitos)
-    const originCep = document.getElementById("contact-origin-cep").value.replace(/\D/g, "");
-    const destinationCep = document.getElementById("contact-destination-cep").value.replace(/\D/g, "");
-  
-    if (originCep.length !== 8 || destinationCep.length !== 8) {
-      responseMessage.innerHTML = `<p class="text-danger">O CEP deve conter exatamente 8 dígitos numéricos.</p>`;
-      return;
-    }
+  // Validação de CEPs (mínimo 8 dígitos)
+  const originCep = document.getElementById("contact-origin-cep").value.replace(/\D/g, "");
+  const destinationCep = document.getElementById("contact-destination-cep").value.replace(/\D/g, "");
+
+  if (originCep.length !== 8 || destinationCep.length !== 8) {
+    responseMessage.innerHTML = `<p class="text-danger">O CEP deve conter exatamente 8 dígitos numéricos.</p>`;
+    return;
+  }
+
+  // Validação da data do evento
+  const dateInput = document.getElementById("contact-date");
+  const dateValue = dateInput.value.trim();
+
+  const [dia, mes, ano] = dateValue.split("/");
+
+  if (!dia || !mes || !ano || dia.length !== 2 || mes.length !== 2 || ano.length !== 4) {
+    responseMessage.innerHTML = `<p class="text-danger">Preencha a data corretamente no formato DD/MM/AAAA.</p>`;
+    return;
+  }
+
+  const dataEvento = new Date(`${ano}-${mes}-${dia}`);
+  const hoje = new Date();
+  hoje.setHours(0, 0, 0, 0); // zera a hora para comparação apenas de data
+
+  if (dataEvento.getFullYear() < hoje.getFullYear()) {
+    responseMessage.innerHTML = `<p class="text-danger">O ano do evento não pode ser anterior ao ano atual.</p>`;
+    return;
+  }
+
+  if (dataEvento < hoje) {
+    responseMessage.innerHTML = `<p class="text-danger">A data do evento não pode estar no passado.</p>`;
+    return;
+  }
 
   submitBtn.innerHTML = '<span class="loader"></span>';
   submitBtn.disabled = true;
